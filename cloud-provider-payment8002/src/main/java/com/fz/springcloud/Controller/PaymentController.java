@@ -43,7 +43,12 @@ public class PaymentController {
         }else {
             return new CommonResult( 444,"失败" ,null);
         }
+    }
 
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLB()
+    {
+        return serverPort;
     }
 
 }
